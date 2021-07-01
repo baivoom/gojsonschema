@@ -15,6 +15,10 @@ type EmbeddedFile struct {
 	file fs.File
 }
 
+func NewFromEmbeddedFS(fs *embed.FS) *EmbeddedFS {
+	return &EmbeddedFS{fs}
+}
+
 func (efs *EmbeddedFS) Open(name string) (http.File, error) {
 	file, error := efs.fs.Open(name)
 	if error != nil {
