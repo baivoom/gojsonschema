@@ -1,4 +1,4 @@
-module github.com/xeipuuv/gojsonschema
+module github.com/baivoom/gojsonschema
 
 require (
 	github.com/stretchr/testify v1.3.0
